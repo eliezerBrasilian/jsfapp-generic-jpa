@@ -10,12 +10,12 @@ package _jpa;
  */
 public class BaseRepository<T> extends GenericDao<T> {
 	
-	 /**
+     /**
      * Constructs a BaseRepository for the specified entity class.
      *
      * @param entityClass the class of the entity to be managed by this repository.
      */
-	public BaseRepository(Class<T> entityClass) {
-		super(entityClass);
-	}
+        public BaseRepository(Class<T> entityClass) {
+	super(entityClass);
+        }
 }

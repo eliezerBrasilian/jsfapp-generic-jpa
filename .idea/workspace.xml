@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ca2eb37-e100-4557-bf6e-a19dbf267204" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/paginas/limbo/home/home.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/indentar/com/projetoestudo/bean_controller/LimboMB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/indentar/com/projetoestudo/bean_controller/LimboMB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/indentar/com/projetoestudo/entidades/rn/LimboUserRN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/indentar/com/projetoestudo/entidades/rn/LimboUserRN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/paginas/limbo/login/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/paginas/limbo/login/login.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/paginas/limbo/signUp/signUp.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/paginas/limbo/signUp/signUp.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetoEstudo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/def.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +33,12 @@
     &quot;assignee&quot;: &quot;eliezerBrasilian&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MPiresIndentar/ProjetoEstudo.git&quot;,
-    &quot;accountId&quot;: &quot;6c75842c-6e74-4cbb-bad6-0de959770655&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/eliezerBrasilian/jsfapp-generic-jpa.git",
+    "accountId": "6c75842c-6e74-4cbb-bad6-0de959770655"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -58,10 +57,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Eliezer/Desktop/WORKING/ProjetoEstudo",
+    "last_opened_file_path": "C:/Users/Eliezer/eclipse-workspace/jsfapp_netbeans",
     "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>

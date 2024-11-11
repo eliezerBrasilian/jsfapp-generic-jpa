@@ -4,7 +4,7 @@
   <groupId>jsfapp</groupId>
   <artifactId>generic_jpa</artifactId>
   <name>jsf_app_generic_jpa</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <build>
     <plugins>
       <plugin>
@@ -77,6 +77,13 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>Library deployment at maven with github</name>
+      <url>https://maven.pkg.github.com/eliezerBrasilian/jsfapp-generic-jpa</url>
+    </repository>
+  </distributionManagement>
   <properties>
     <maven.test.skip>false</maven.test.skip>
     <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>

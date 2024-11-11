@@ -67,7 +67,7 @@ public abstract class GenericDao<T> {
      * Updates an existing entity in the database.
      *
      * @param entity the entity to be updated.
-     * @return the updated entity.
+     * 
      * @throws EntityNotFoundException if the entity is null.
      */
     public void update(T entity) throws PerformEntityOperationException, IllegalArgumentException {
@@ -103,7 +103,7 @@ public abstract class GenericDao<T> {
      *
      * @param id the id of the entity to be found.
      * @return the found entity or null if not found
-     * @throws PerformEntityOperationException
+     * @throws PerformEntityOperationException if was not possible to find row in database
      */
     public T findById(Serializable id) throws PerformEntityOperationException {
         Session session = getSession();
