@@ -6,3 +6,4 @@
 <li>update()</li>
 <li>deleteById()</li>
 <li>deleteAll()</li>
+<li>searchByField()</li>

@@ -21,7 +21,7 @@ import org.hibernate.Transaction;
  * @author Eliezer Brasilian
  *
  * Visit repository link on GitHub:
- * <a href="https://github.com/eliezerBrasilian/jsf-template">GitHub</a>
+ * <a href="https://github.com/eliezerBrasilian/jsfapp-generic-jpa">GitHub</a>
  */
 public abstract class GenericDao<T> {
 
@@ -211,5 +211,41 @@ public abstract class GenericDao<T> {
             }
         }
     }
+    
+ /**
+ * Searches for entities based on a specific field and its value.
+ *
+ * @param fieldName the name of the field to search by.
+ * @param value the value of the field to match.
+ * @return a list of entities that match the field and value.
+ * @throws PerformEntityOperationException if an error occurs during the search.
+ */
+    public List<T> searchByField(String fieldName, Object value) throws PerformEntityOperationException{
+        Session session = getSession();
+        Transaction transaction = session.beginTransaction();
+        
+        try{
+            String hql = "FROM " + entityClass.getName() + " WHERE " + fieldName + " = :value";
+            List<T> results = session.createQuery(hql)
+                    .setParameter("value", value)
+                    .list();
+            
+            transaction.commit();
+            return results;
+        }catch(HibernateException e){
+            transaction.rollback();
+            e.printStackTrace();
+            throw new PerformEntityOperationException("Error searching by field: " + e.getMessage());
+        }finally{
+              try {
+                if (session.isOpen()) {
+                    session.close();
+                }
+            } catch (HibernateException e) {
+                throw new PerformEntityOperationException("Error closing session after search by field: " + e.getMessage());
+            }
+        }
+    }
+    
 
 }
