@@ -5,6 +5,7 @@ import _jpa.exceptions.EntityNotFoundException;
 import _jpa.exceptions.PerformEntityOperationException;
 import java.io.Serializable;
 import java.util.List;
+import java.util.function.Function;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.JDBCException;
@@ -237,6 +238,40 @@ public abstract class GenericDao<T> {
             e.printStackTrace();
             throw new PerformEntityOperationException("Error searching by field: " + e.getMessage());
         }finally{
+              try {
+                if (session.isOpen()) {
+                    session.close();
+                }
+            } catch (HibernateException e) {
+                throw new PerformEntityOperationException("Error closing session after search by field: " + e.getMessage());
+            }
+        }
+    }
+    
+     /**
+        * Executes a custom query defined by a lambda function.
+        *
+        * @param queryFunction a lambda function that defines the custom query logic.
+        * @param <R> the type of the result returned by the query.
+        * @return the result of the query execution.
+        * @throws PerformEntityOperationException if an error occurs during query execution.
+    */
+    public <R> R createCustom(Function<Session, R> queryFunction){
+        Session session = getSession();
+        Transaction transaction = null;
+        
+        try{
+            transaction = session.beginTransaction();
+           
+            R result = queryFunction.apply(session);
+            transaction.commit();
+            
+            return result;
+            
+    }catch(HibernateException e){
+        e.printStackTrace();
+        throw new PerformEntityOperationException("Error executing custom query: " + e.getMessage());
+    }finally{
               try {
                 if (session.isOpen()) {
                     session.close();
